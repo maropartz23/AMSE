@@ -76,7 +76,7 @@ List<Fruit> allFruits = [
       image: "assets/bara-bara.jpeg",
       type: "Paramecia",
       user: "Baggy le Clown",
-      userImage: "assets/baggy.jpg"),
+      userImage: "assets/baggy.jpeg"),
   Fruit(
       name: "Sube Sube no Mi",
       description:
@@ -84,7 +84,7 @@ List<Fruit> allFruits = [
       image: "assets/sube-sube.jpeg",
       type: "Paramecia",
       user: "Alvida",
-      userImage: "assets/alvida.jpeg"),
+      userImage: "assets/alvida.jpg"),
   Fruit(
       name: "Bomu Bomu no Mi",
       description:
@@ -92,15 +92,15 @@ List<Fruit> allFruits = [
       image: "assets/boumo-boumo.jpg",
       type: "Zoan",
       user: "Gem",
-      userImage: "assets/gem.jpg"),
+      userImage: "assets/gem.jpeg"),
   Fruit(
       name: "Hana Hana no Mi",
       description:
           "Permet de faire pousser des parties du corps partout, même sur une autre personne.",
-      image: "assets/hana-hana.jpeg",
+      image: "assets/hana-hana.jpg",
       type: "Paramecia",
       user: "Nico Robin",
-      userImage: "assets/robin.jpeg"),
+      userImage: "assets/robin.jpg"),
   Fruit(
       name: "Mane Mane no Mi",
       description: "Permet de modifier son apparence en touchant son visage.",
@@ -124,43 +124,43 @@ List<Fruit> allFruits = [
       user: "Don Quijote Doflamingo",
       userImage: "assets/dofla.webp"),
   Fruit(
-      name: "Hito Hito no Mi  (Model: Bison)",
+      name: "Mera Mera no Mi",
       description:
-          "Permet de se transformer en un immense Daibutsu(Bouddha), augmentant considérablement la force physique et générant des ondes de choc.",
-      image: "assets/ushi_ushi_no_mi.jpg",
-      type: "Zoan",
-      user: "Sengoku",
-      userImage: "assets/sengoku.jpg"),
+          "permet à son utilisateur de créer, contrôler et de se transformer en feu et flammes à volonté. Ce fruit fut mangé par Portgas D. Ace puis, 2 ans après la mort de ce dernier, par Sabo.",
+      image: "assets/mera-mera.jpeg",
+      type: "Logia",
+      user: "Sabo",
+      userImage: "assets/sabo.jpg"),
   Fruit(
-      name: "Hito Hito no Mi  (Model: Bison)",
+      name: "Goro Goro no Mi",
       description:
-          "Permet de se transformer en un immense Daibutsu(Bouddha), augmentant considérablement la force physique et générant des ondes de choc.",
-      image: "assets/ushi_ushi_no_mi.jpg",
-      type: "Zoan",
-      user: "Sengoku",
-      userImage: "assets/sengoku.jpg"),
+          "permet à son utilisateur de se transformer, de produire à volonté ainsi que contrôler l'électricité",
+      image: "assets/goro-goro.webp",
+      type: "Logia",
+      user: "Ener",
+      userImage: "assets/ener.webp"),
   Fruit(
-      name: "Hito Hito no Mi  (Model: Bison)",
+      name: "Pika Pika no Mi",
       description:
           "Permet de se transformer en un immense Daibutsu(Bouddha), augmentant considérablement la force physique et générant des ondes de choc.",
-      image: "assets/ushi_ushi_no_mi.jpg",
-      type: "Zoan",
-      user: "Sengoku",
-      userImage: "assets/sengoku.jpg"),
+      image: "assets/pika-pika.jpg",
+      type: "Logia",
+      user: "Borsalino Kizaru",
+      userImage: "assets/kizaru.webp"),
   Fruit(
-      name: "Hito Hito no Mi  (Model: Bison)",
+      name: "Hie Hie no Mi",
       description:
-          "Permet de se transformer en un immense Daibutsu(Bouddha), augmentant considérablement la force physique et générant des ondes de choc.",
-      image: "assets/ushi_ushi_no_mi.jpg",
-      type: "Zoan",
-      user: "Sengoku",
-      userImage: "assets/sengoku.jpg"),
+          "permet à son utilisateur de créer, contrôler et de devenir de la glace",
+      image: "assets/hie-hie.webp",
+      type: "Logia",
+      user: "Kuzan Aokiji",
+      userImage: "assets/aokiji.webp"),
   Fruit(
-      name: "Hito Hito no Mi  (Model: Bison)",
+      name: "Moku Moku no Mi",
       description:
-          "Permet de se transformer en un immense Daibutsu(Bouddha), augmentant considérablement la force physique et générant des ondes de choc.",
-      image: "assets/ushi_ushi_no_mi.jpg",
-      type: "Zoan",
-      user: "Sengoku",
-      userImage: "assets/sengoku.jpg"),
+          "L'utilisateur de ce fruit est capable de générer, de manipuler et de devenir de la fumée",
+      image: "assets/moku-moku.webp",
+      type: "Logia",
+      user: "Smocker",
+      userImage: "assets/smoker.jpg"),
 ];
