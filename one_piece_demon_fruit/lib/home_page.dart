@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Colors.lightBlue,
                     shadows: [
                       Shadow(
                         blurRadius: 4.0,
