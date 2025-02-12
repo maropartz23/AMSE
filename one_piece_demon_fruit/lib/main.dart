@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 import 'media_page.dart';
-import 'about_page.dart';
+import 'favorite_page.dart';
 import 'favorites_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -35,7 +35,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
-  final List<Widget> _pages = [HomePage(), MediaPage(), AboutPage()];
+  final List<Widget> _pages = [HomePage(), MediaPage(), FavoritePage()];
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,8 @@ class _MainScreenState extends State<MainScreen> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.list), label: "Media"),
-          BottomNavigationBarItem(icon: Icon(Icons.info), label: "About"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite), label: "Favorites"),
         ],
       ),
     );
