@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/background.jpg', // Mets ton image ici
+              'assets/background.jpg',
               fit: BoxFit.cover,
             ),
           ),
@@ -17,11 +17,11 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Bienvenue sur l'application des Fruits du Démon !",
+                  "Les Fruits du Démon!",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: Colors.lightBlue,
+                    color: Colors.white,
                     shadows: [
                       Shadow(
                         blurRadius: 4.0,

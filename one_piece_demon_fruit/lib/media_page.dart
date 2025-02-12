@@ -109,8 +109,8 @@ class FruitList extends StatelessWidget {
                                 SizedBox(width: 10),
                                 Image.asset(
                                   fruit.userImage,
-                                  width: 40,
-                                  height: 40,
+                                  width: 80,
+                                  height: 80,
                                 ),
                               ],
                             ),
