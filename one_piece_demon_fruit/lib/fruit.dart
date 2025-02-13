@@ -90,7 +90,7 @@ List<Fruit> allFruits = [
       description:
           "Permet de faire exploser n’importe quelle partie du corps, rendant l’utilisateur insensible aux explosions.",
       image: "assets/boumo-boumo.jpg",
-      type: "Zoan",
+      type: "Paramecia",
       user: "Gem",
       userImage: "assets/gem.jpeg"),
   Fruit(
@@ -118,7 +118,7 @@ List<Fruit> allFruits = [
   Fruit(
       name: "Ito Ito no Mi",
       description:
-          "Permet de se transformer en un immense Daibutsu(Bouddha), augmentant considérablement la force physique et générant des ondes de choc.",
+          "Permet à son utilisateur de créer et de manipuler des fils invisibles afin de les utiliser pour contrôler ses adversaires tels des marionnettes, découper toute chose, des personnes ou des bâtiments et même s'en servir pour voler dans le ciel en accrochant ces fils aux nuages, transformant ainsi son utilisateur en Homme-Fils ",
       image: "assets/ito-ito.webp",
       type: "Paramecia",
       user: "Don Quijote Doflamingo",
@@ -126,7 +126,7 @@ List<Fruit> allFruits = [
   Fruit(
       name: "Mera Mera no Mi",
       description:
-          "permet à son utilisateur de créer, contrôler et de se transformer en feu et flammes à volonté. Ce fruit fut mangé par Portgas D. Ace puis, 2 ans après la mort de ce dernier, par Sabo.",
+          "Permet à son utilisateur de créer, contrôler et de se transformer en feu et flammes à volonté. Ce fruit fut mangé par Portgas D. Ace puis, 2 ans après la mort de ce dernier, par Sabo.",
       image: "assets/mera-mera.jpeg",
       type: "Logia",
       user: "Sabo",
@@ -134,7 +134,7 @@ List<Fruit> allFruits = [
   Fruit(
       name: "Goro Goro no Mi",
       description:
-          "permet à son utilisateur de se transformer, de produire à volonté ainsi que contrôler l'électricité",
+          "Permet à son utilisateur de se transformer, de produire à volonté ainsi que contrôler l'électricité.",
       image: "assets/goro-goro.webp",
       type: "Logia",
       user: "Ener",
@@ -150,7 +150,7 @@ List<Fruit> allFruits = [
   Fruit(
       name: "Hie Hie no Mi",
       description:
-          "permet à son utilisateur de créer, contrôler et de devenir de la glace",
+          "Permet à son utilisateur de créer, contrôler et de devenir de la glace.",
       image: "assets/hie-hie.webp",
       type: "Logia",
       user: "Kuzan Aokiji",
@@ -158,9 +158,97 @@ List<Fruit> allFruits = [
   Fruit(
       name: "Moku Moku no Mi",
       description:
-          "L'utilisateur de ce fruit est capable de générer, de manipuler et de devenir de la fumée",
+          "L'utilisateur de ce fruit est capable de générer, de manipuler et de devenir de la fumée.",
       image: "assets/moku-moku.webp",
       type: "Logia",
       user: "Smocker",
       userImage: "assets/smoker.jpg"),
+  Fruit(
+      name: "Suna Suna no Mi",
+      description:
+          "Permet de produire à volonté, de contrôler et de se transformer en sable, transformant l'utilisateur en Homme-Sable.",
+      image: "assets/suna-suna.webp",
+      type: "Logia",
+      user: "Crocodile",
+      userImage: "assets/croco.jpeg"),
+  Fruit(
+      name: "Yami Yami no Mi",
+      description:
+          "Permet à son utilisateur de produire, devenir et contrôler les ténèbres, le transformant ainsi en Homme-Ténèbres. ",
+      image: "assets/yami-yami.jpeg",
+      type: "Logia",
+      user: "Marshall D. Teach (Barbe Noire)",
+      userImage: "assets/teach.webp"),
+  Fruit(
+      name: "Magu Magu no Mi",
+      description:
+          "Permet à son utilisateur de devenir, de générer et de contrôler le magma à volonté, transformant l'utilisateur en Homme-Magma.",
+      image: "assets/magu-magu.webp",
+      type: "Logia",
+      user: "Akainu",
+      userImage: "assets/akainu.webp"),
+  Fruit(
+      name: "Neko Neko no Mi (Model Léopard)",
+      description:
+          "Permet à son utilisateur de se transformer en léopard ou en un hybride humain-léopard.",
+      image: "assets/neko.webp",
+      type: "Zoan",
+      user: "Rob Lucci",
+      userImage: "assets/rob.webp"),
+  Fruit(
+      name: "Tori Tori no Mi (Model Faucon)",
+      description:
+          "Permet à son utilisateur de se transformer en un faucon complet ou en un être hybride faucon-humain. Ce Fruit du Démon est un des rares 5 Fruits du Démon qui permettent à leur utilisateur de voler.",
+      image: "assets/tori-tori.png",
+      type: "Zoan",
+      user: "Pell",
+      userImage: "assets/pell.webp"),
+  Fruit(
+      name: "Doru Doru no Mi",
+      description:
+          "Permet à son utilisateur de créer et de contrôler de la cire à volonté. L’utilisateur devient ainsi un Homme-Bougie",
+      image: "assets/doru-doru.jpg",
+      type: "Paramecia",
+      user: "Mr. 3",
+      userImage: "assets/mr3.webp"),
+  Fruit(
+      name: "Ope Ope no Mi",
+      description:
+          "Permet à son utilisateur de créer une sphère d'aura bleue claire translucide, où l'utilisateur peut contrôler comme bon lui semble le placement et l'orientation des objets et des êtres vivants à l'intérieur. L'utilisateur peut aussi donner la vie éternelle en échange de sa propre vie.",
+      image: "assets/ope-ope.webp",
+      type: "Logia",
+      user: "Trafalgard D. Water Law",
+      userImage: "assets/law.webp"),
+  Fruit(
+      name: "Ryu Ryu no Mi (Model Pteranodon)",
+      description:
+          "Ce Fruit permet de se transformer en un être hybride ptéranodon ou en ptéranodon complet.",
+      image: "assets/ryu-ryu.webp",
+      type: "Zoan",
+      user: "King",
+      userImage: "assets/king.webp"),
+  Fruit(
+      name: "Suna Suna no Mi",
+      description:
+          "Permet de produire à volonté, de contrôler et de se transformer en sable, transformant l'utilisateur en Homme-Sable.",
+      image: "assets/suna-suna.webp",
+      type: "Logia",
+      user: "Crocodile",
+      userImage: "assets/croco.jpeg"),
+  Fruit(
+      name: "Suna Suna no Mi",
+      description:
+          "Permet de produire à volonté, de contrôler et de se transformer en sable, transformant l'utilisateur en Homme-Sable.",
+      image: "assets/suna-suna.webp",
+      type: "Logia",
+      user: "Crocodile",
+      userImage: "assets/croco.jpeg"),
+  Fruit(
+      name: "Suna Suna no Mi",
+      description:
+          "Permet de produire à volonté, de contrôler et de se transformer en sable, transformant l'utilisateur en Homme-Sable.",
+      image: "assets/suna-suna.webp",
+      type: "Logia",
+      user: "Crocodile",
+      userImage: "assets/croco.jpeg"),
 ];
