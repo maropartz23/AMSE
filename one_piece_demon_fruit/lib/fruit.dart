@@ -65,7 +65,7 @@ List<Fruit> allFruits = [
       name: "Hito Hito no Mi  (Model: Bouddha)",
       description:
           "Permet de se transformer en un immense Daibutsu(Bouddha), augmentant considérablement la force physique et générant des ondes de choc.",
-      image: "assets/hito-hito-no-mi.jpeg",
+      image: "assets/hito-sengoku.webp",
       type: "Zoan",
       user: "Sengoku",
       userImage: "assets/sengoku.jpeg"),
@@ -142,7 +142,7 @@ List<Fruit> allFruits = [
   Fruit(
       name: "Pika Pika no Mi",
       description:
-          "Permet de se transformer en un immense Daibutsu(Bouddha), augmentant considérablement la force physique et générant des ondes de choc.",
+          "Ce Fruit permet à l'utilisateur de créer, contrôler et de devenir de la lumière, faisant de l'utilisateur un Homme-Lumière. Il lui permet aussi de se déplacer à la vitesse de la lumière, ce qui fait de l'utilisateur l'homme théoriquement le plus rapide de tout One Piece, et de voyager par des moyens de réflexion (par des miroirs par exemple).",
       image: "assets/pika-pika.jpg",
       type: "Logia",
       user: "Borsalino Kizaru",
@@ -220,7 +220,7 @@ List<Fruit> allFruits = [
       user: "Trafalgard D. Water Law",
       userImage: "assets/law.webp"),
   Fruit(
-      name: "Ryu Ryu no Mi (Model Pteranodon)",
+      name: "Ryu Ryu no Mi (Model: Pteranodon)",
       description:
           "Ce Fruit permet de se transformer en un être hybride ptéranodon ou en ptéranodon complet.",
       image: "assets/ryu-ryu.webp",
@@ -228,27 +228,11 @@ List<Fruit> allFruits = [
       user: "King",
       userImage: "assets/king.webp"),
   Fruit(
-      name: "Suna Suna no Mi",
+      name: "Hito Hito no Mi (Model: Humain)",
       description:
-          "Permet de produire à volonté, de contrôler et de se transformer en sable, transformant l'utilisateur en Homme-Sable.",
+          "permet à son utilisateur de se transformer en hybride humain ou en humain à part entière.",
       image: "assets/suna-suna.webp",
-      type: "Logia",
-      user: "Crocodile",
-      userImage: "assets/croco.jpeg"),
-  Fruit(
-      name: "Suna Suna no Mi",
-      description:
-          "Permet de produire à volonté, de contrôler et de se transformer en sable, transformant l'utilisateur en Homme-Sable.",
-      image: "assets/suna-suna.webp",
-      type: "Logia",
-      user: "Crocodile",
-      userImage: "assets/croco.jpeg"),
-  Fruit(
-      name: "Suna Suna no Mi",
-      description:
-          "Permet de produire à volonté, de contrôler et de se transformer en sable, transformant l'utilisateur en Homme-Sable.",
-      image: "assets/suna-suna.webp",
-      type: "Logia",
-      user: "Crocodile",
-      userImage: "assets/croco.jpeg"),
+      type: "Zoan",
+      user: "Chopper",
+      userImage: "assets/chopper.webp"),
 ];
