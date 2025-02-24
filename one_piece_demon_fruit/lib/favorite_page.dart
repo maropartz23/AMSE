@@ -21,15 +21,28 @@ class FavoritePage extends StatelessWidget {
               final fruit = favoriteFruits[index];
               return ExpansionTile(
                 leading: Image.asset(fruit.image),
-                title: Text(fruit.name),
+                title: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(fruit.name),
+                ),
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Utilisateur: ${fruit.user}",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Row(
+                          children: [
+                            Text("Utilisateur: ${fruit.user}",
+                                style: TextStyle(fontWeight: FontWeight.bold)),
+                            SizedBox(width: 10),
+                            Image.asset(
+                              fruit.userImage,
+                              width: 40,
+                              height: 40,
+                            ),
+                          ],
+                        ),
                         SizedBox(height: 5),
                         Text(fruit.description),
                       ],
