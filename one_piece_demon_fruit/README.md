@@ -7,8 +7,7 @@ Une application Flutter permettant d'explorer les Fruits du Démon de l'univers 
 Affichage des Fruits du Démon avec images et descriptions  
 Navigation intuitive entre les catégories (Logia, Zoan, Paramecia)  
 Ajout aux favoris pour retrouver facilement ses fruits préférés  
-Images des utilisateurs des fruits affichées à côté de leurs noms  
-Interface moderne et responsiveavec une navigation fluide  
+Images des utilisateurs des fruits affichées à côté de leurs noms   
 
 ## Installation et Exécution
 
