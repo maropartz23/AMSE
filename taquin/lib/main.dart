@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'dart:async';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,30 @@ class _ImageTransformPageState extends State<ImageTransformPage> {
   double _rotationY = 0.0;
   double _scale = 1.0;
   bool _isMirrored = false;
+  late Timer _timer;
+  bool _isAnimating = false;
+
+  void _startAnimation() {
+    _isAnimating = true;
+    _timer = Timer.periodic(Duration(milliseconds: 50), (timer) {
+      setState(() {
+        _rotationZ < pi - 0.06 ? _rotationZ += 0.05 : _rotationZ = -pi;
+        _rotationX < pi - 0.04 ? _rotationX += 0.03 : _rotationX = -pi;
+        _rotationY < pi - 0.03 ? _rotationY += 0.02 : _rotationY = -pi;
+      });
+    });
+  }
+
+  void _stopAnimation() {
+    _isAnimating = false;
+    _timer.cancel();
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -101,6 +126,11 @@ class _ImageTransformPageState extends State<ImageTransformPage> {
                 _isMirrored = value;
               });
             },
+          ),
+          ElevatedButton(
+            onPressed: _isAnimating ? _stopAnimation : _startAnimation,
+            child: Text(
+                _isAnimating ? "Arrêter l'animation" : "Démarrer l'animation"),
           ),
         ],
       ),
