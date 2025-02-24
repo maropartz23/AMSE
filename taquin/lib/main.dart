@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: ImageTransformPage(),
     );
   }
@@ -20,9 +21,10 @@ class ImageTransformPage extends StatefulWidget {
 }
 
 class _ImageTransformPageState extends State<ImageTransformPage> {
-  double _rotation = 0.0;
+  double _rotationZ = 0.0;
+  double _rotationX = 0.0;
+  double _rotationY = 0.0;
   double _scale = 1.0;
-  double _perspective = 0.0;
   bool _isMirrored = false;
 
   @override
@@ -30,35 +32,53 @@ class _ImageTransformPageState extends State<ImageTransformPage> {
     return Scaffold(
       appBar: AppBar(title: Text("Transformations d'Image")),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(
-            child: Center(
-              child: Transform(
-                alignment: Alignment.center,
-                transform: Matrix4.identity()
-                  ..setEntry(3, 2, _perspective) // Perspective 3D
-                  ..rotateY(_isMirrored ? pi : 0) // Effet miroir
-                  ..rotateZ(_rotation),
-                child: Transform.scale(
-                  scale: _scale,
-                  child: Image.network(
-                    'https://picsum.photos/512/1024',
-                    width: 200,
-                    height: 200,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
+          Transform(
+            alignment: Alignment.center,
+            transform: Matrix4.identity()
+              ..rotateX(_rotationX)
+              ..rotateY(_rotationY)
+              ..rotateZ(_rotationZ)
+              ..scale(_isMirrored ? -_scale : _scale, _scale),
+            child: Image.network(
+              'https://picsum.photos/300/300',
+              width: 200,
+              height: 200,
+              fit: BoxFit.cover,
             ),
           ),
-          Text("Rotation"),
+          SizedBox(height: 20),
+          Text("Rotation Z"),
           Slider(
-            value: _rotation,
+            value: _rotationZ,
             min: -pi,
             max: pi,
             onChanged: (value) {
               setState(() {
-                _rotation = value;
+                _rotationZ = value;
+              });
+            },
+          ),
+          Text("Rotation X"),
+          Slider(
+            value: _rotationX,
+            min: -pi,
+            max: pi,
+            onChanged: (value) {
+              setState(() {
+                _rotationX = value;
+              });
+            },
+          ),
+          Text("Rotation Y"),
+          Slider(
+            value: _rotationY,
+            min: -pi,
+            max: pi,
+            onChanged: (value) {
+              setState(() {
+                _rotationY = value;
               });
             },
           ),
@@ -70,17 +90,6 @@ class _ImageTransformPageState extends State<ImageTransformPage> {
             onChanged: (value) {
               setState(() {
                 _scale = value;
-              });
-            },
-          ),
-          Text("perspective"),
-          Slider(
-            value: _perspective,
-            min: -1,
-            max: 1,
-            onChanged: (value) {
-              setState(() {
-                _perspective = value;
               });
             },
           ),
