@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   runApp(MyApp());
@@ -8,7 +9,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: ImageTransformPage(),
     );
   }
@@ -22,32 +22,40 @@ class ImageTransformPage extends StatefulWidget {
 class _ImageTransformPageState extends State<ImageTransformPage> {
   double _rotation = 0.0;
   double _scale = 1.0;
+  double _perspective = 0.0;
+  bool _isMirrored = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Sliders")),
+      appBar: AppBar(title: Text("Transformations d'Image")),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Transform.rotate(
-            angle: _rotation,
-            child: Transform.scale(
-              scale: _scale,
-              child: Image.network(
-                'https://picsum.photos/300/300',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
+          Expanded(
+            child: Center(
+              child: Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.identity()
+                  ..setEntry(3, 2, _perspective) // Perspective 3D
+                  ..rotateY(_isMirrored ? pi : 0) // Effet miroir
+                  ..rotateZ(_rotation),
+                child: Transform.scale(
+                  scale: _scale,
+                  child: Image.network(
+                    'https://picsum.photos/512/1024',
+                    width: 200,
+                    height: 200,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
             ),
           ),
-          SizedBox(height: 20),
           Text("Rotation"),
           Slider(
             value: _rotation,
-            min: 0.0,
-            max: 6.28,
+            min: -pi,
+            max: pi,
             onChanged: (value) {
               setState(() {
                 _rotation = value;
@@ -62,6 +70,26 @@ class _ImageTransformPageState extends State<ImageTransformPage> {
             onChanged: (value) {
               setState(() {
                 _scale = value;
+              });
+            },
+          ),
+          Text("perspective"),
+          Slider(
+            value: _perspective,
+            min: -1,
+            max: 1,
+            onChanged: (value) {
+              setState(() {
+                _perspective = value;
+              });
+            },
+          ),
+          SwitchListTile(
+            title: Text("Effet miroir"),
+            value: _isMirrored,
+            onChanged: (value) {
+              setState(() {
+                _isMirrored = value;
               });
             },
           ),
