@@ -16,8 +16,8 @@ class HomePage extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.7), // ✅ Fond semi-transparent
-                borderRadius: BorderRadius.circular(12), // ✅ Coins arrondis
+                color: Colors.black.withOpacity(0.7),
+                borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black45,
@@ -27,9 +27,9 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               child: Text(
-                "Les Fruits du Démon!",
+                "Les Fruits du Démon !",
                 style: TextStyle(
-                  fontSize: 28, // ✅ Plus grand
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   letterSpacing: 1.5,

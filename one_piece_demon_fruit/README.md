@@ -1,16 +1,17 @@
-# one_piece_demon_fruit
+## One Piece Demon Fruit App
 
-A new Flutter project.
+Une application Flutter permettant d'explorer les Fruits du Démon de l'univers *One Piece*, classés par catégories. Les utilisateurs peuvent découvrir leurs descriptions, voir leurs utilisateurs et ajouter leurs fruits préférés à une liste de favoris.
 
-## Getting Started
+## Fonctionnalités
 
-This project is a starting point for a Flutter application.
+Affichage des Fruits du Démon avec images et descriptions  
+Navigation intuitive entre les catégories (Logia, Zoan, Paramecia)  
+Ajout aux favoris pour retrouver facilement ses fruits préférés  
+Images des utilisateurs des fruits affichées à côté de leurs noms  
+Interface moderne et responsiveavec une navigation fluide  
 
-A few resources to get you started if this is your first Flutter project:
+## Installation et Exécution
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Cloner le projet :  
+git clone https://github.com/maropartz23/AMSE.git
+cd one_piece_demon_fruit
