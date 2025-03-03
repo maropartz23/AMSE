@@ -33,8 +33,8 @@ class Exo5 extends StatefulWidget {
 }
 
 class _Exo5State extends State<Exo5> {
-  int gridSize = 3; // Taille par défaut du plateau (3x3)
-  String imageURL = 'https://picsum.photos/512'; // URL de l'image
+  int gridSize = 3;
+  String imageURL = 'https://picsum.photos/512';
 
   @override
   Widget build(BuildContext context) {
@@ -75,12 +75,11 @@ class _Exo5State extends State<Exo5> {
                   value: gridSize.toDouble(),
                   min: 2,
                   max: 6,
-                  divisions: 4, // Pour des valeurs entières (2, 3, 4, 5, 6)
+                  divisions: 4,
                   label: gridSize.toString(),
                   onChanged: (double newValue) {
                     setState(() {
-                      gridSize = newValue
-                          .round(); // Arrondir à l'entier le plus proche
+                      gridSize = newValue.round();
                     });
                   },
                 ),
