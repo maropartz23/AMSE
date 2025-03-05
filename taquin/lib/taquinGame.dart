@@ -13,19 +13,45 @@ class _Exo7State extends State<Exo7> {
   int moveCount = 0;
   bool isSolved = false;
   List<List<Tile>> history = [];
-  String imageURL = 'https://picsum.photos/512';
+  List<String> imagePaths = [
+    'assets/1.webp',
+    'assets/2.jpg',
+    'assets/3.webp',
+    'assets/4.jpg',
+    'assets/5.jpeg',
+    'assets/6.jpeg',
+    'assets/7.jpeg',
+    'assets/8.jpeg',
+    'assets/9.jpg',
+    'assets/10.webp',
+    'assets/11.webp',
+    'assets/12.webp',
+    'assets/13.jpg',
+    'assets/14.webp',
+    'assets/16.jpg',
+    'assets/17.jpg',
+    'assets/18.webp',
+  ];
+  String currentImagePath = '';
 
   @override
   void initState() {
     super.initState();
+    _pickRandomImage();
     _generateTiles();
+  }
+
+  void _pickRandomImage() {
+    setState(() {
+      currentImagePath = imagePaths[math.Random().nextInt(imagePaths.length)];
+    });
   }
 
   void _generateTiles() {
     setState(() {
       tiles = List<Tile>.generate(gridSize * gridSize, (index) {
         return Tile(
-          imageURL: imageURL,
+          imagePath: currentImagePath,
           alignment: Alignment(
             -1.0 + (index % gridSize) * (2.0 / (gridSize - 1)),
             -1.0 + (index ~/ gridSize) * (2.0 / (gridSize - 1)),
@@ -49,6 +75,7 @@ class _Exo7State extends State<Exo7> {
       _swapTiles(move, false);
     }
     _moveEmptyTileToBottomRight();
+    moveCount = 0;
   }
 
   void _moveEmptyTileToBottomRight() {
@@ -139,8 +166,7 @@ class _Exo7State extends State<Exo7> {
 
   void _restartGame() {
     setState(() {
-      imageURL =
-          'https://picsum.photos/512?random=${math.Random().nextInt(1000)}';
+      _pickRandomImage();
       _generateTiles();
     });
   }
@@ -232,18 +258,19 @@ class _Exo7State extends State<Exo7> {
 }
 
 class Tile {
-  String imageURL;
+  String imagePath;
   Alignment alignment;
   int number;
   bool isEmpty;
 
-  Tile(
-      {required this.imageURL,
-      required this.alignment,
-      this.number = 0,
-      this.isEmpty = false});
+  Tile({
+    required this.imagePath,
+    required this.alignment,
+    this.number = 0,
+    this.isEmpty = false,
+  });
 
-  Tile.empty() : this(imageURL: '', alignment: Alignment(0, 0), isEmpty: true);
+  Tile.empty() : this(imagePath: '', alignment: Alignment(0, 0), isEmpty: true);
 
   Widget croppedImageTile(int gridSize) {
     if (isEmpty) {
@@ -257,7 +284,7 @@ class Tile {
             alignment: alignment,
             widthFactor: 1 / gridSize,
             heightFactor: 1 / gridSize,
-            child: Image.network(imageURL, fit: BoxFit.cover),
+            child: Image.asset(imagePath, fit: BoxFit.cover),
           ),
         ),
       ),
