@@ -4,6 +4,7 @@ import 'exo2.dart';
 import 'exo4.dart';
 import 'exo5.dart';
 import 'exo6.dart';
+import 'taquinGame.dart';
 
 void main() {
   runApp(MyApp());
@@ -83,6 +84,18 @@ class MenuPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Exo6()),
+                );
+              },
+            ),
+          ),
+          Card(
+            elevation: 5,
+            child: ListTile(
+              title: Text('Taquin'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Exo7()),
                 );
               },
             ),
