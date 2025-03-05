@@ -33,10 +33,8 @@ class _Exo7State extends State<Exo7> {
           number: index + 1,
         );
       });
-
       emptyTileIndex = gridSize * gridSize - 1;
       tiles[emptyTileIndex] = Tile.empty();
-
       _shuffleTiles(20);
       moveCount = 0;
       isSolved = false;
@@ -107,16 +105,7 @@ class _Exo7State extends State<Exo7> {
       setState(() {
         isSolved = true;
       });
-      _showWinAnimation();
     }
-  }
-
-  void _showWinAnimation() {
-    Future.delayed(Duration(milliseconds: 300), () {
-      setState(() {
-        isSolved = true;
-      });
-    });
   }
 
   void _undoLastMove() {
@@ -146,6 +135,14 @@ class _Exo7State extends State<Exo7> {
         _generateTiles();
       });
     }
+  }
+
+  void _restartGame() {
+    setState(() {
+      imageURL =
+          'https://picsum.photos/512?random=${math.Random().nextInt(1000)}';
+      _generateTiles();
+    });
   }
 
   @override
@@ -204,6 +201,11 @@ class _Exo7State extends State<Exo7> {
                       onPressed: _undoLastMove,
                       child: Text('Annuler'),
                     ),
+                    if (isSolved)
+                      ElevatedButton(
+                        onPressed: _restartGame,
+                        child: Text('Recommencer'),
+                      ),
                   ],
                 ),
                 Text('Taille du plateau: $gridSize x $gridSize'),
